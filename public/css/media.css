@@ -1,0 +1,127 @@
+@media (max-width: 768px) {
+    .services {
+        margin-bottom: 150px; /* Ajuste l'espacement pour mobile */
+
+    }
+    .map{
+        text-align: center;
+        margin: 80px auto 150px;
+    }
+
+    .service-card {
+        width: 100%; /* Chaque carte occupe toute la largeur */
+        margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
+    }
+    .header-accueil-title{
+        font-size: 24px;
+        margin-bottom: 150px;
+        margin-top: 100px;
+    }
+    .btn-warning{
+        width: 110px;
+    }
+    .about-title {
+            font-size: 16px !important; /* Réduit la taille du texte */
+            line-height: 1.4; /* Réduit l'espacement entre les lignes */
+            padding: 10px; /* Moins de padding */
+            width: 100%; /* Prend presque toute la largeur de l'écran */
+    }
+
+
+    .text-about {
+        padding: 20px !important; /* Réduction du padding global */
+    }
+
+    .detail-basique,
+    .detail-premium{
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* S'assure que le conteneur occupe toute la largeur */
+        padding: 0 15px; /* Réduit les marges latérales */
+    }
+
+    .row {
+        flex-direction: column; /* Empile les colonnes */
+        align-items: center; /* Centre les éléments */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%; /* Prend toute la largeur de la colonne */
+        margin-bottom: 20px; /* Espacement vertical entre les cartes */
+    }
+}
+@media (max-width: 768px) {
+    .navbar-custom {
+
+        height: 250px;
+    }
+
+    .navbar-brand img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-title {
+        margin-top: 200px;
+        font-size: 1.4rem;
+
+    }
+
+    .btn-contact {
+        margin-top: 50px;
+        font-size: 1rem;
+
+    }
+}
+@media (min-width: 768px) {
+    .about-section .container {
+        flex-direction: row; /* Passe en mode côte à côte */
+        align-items: flex-start; /* Aligne en haut */
+        text-align: left; /* Texte aligné à gauche */
+    }
+
+    .about-text{
+        width: 50%; /* Chaque colonne prend 50% de la largeur */
+    }
+
+    .about-image {
+        width: 50%;
+        margin-left: 50px; /* Supprime l'espacement vertical */
+        text-align: right; /* Centre l'image à droite */
+    }
+
+    .about-button {
+        width: auto; /* Le bouton n'a pas de limite spécifique sur Desktop */
+        text-align: left; /* Bouton aligné à gauche */
+        margin-top: 0; /* Supprime tout espacement supplémentaire */
+    }
+}
+
+@media(max-width: 766px) {
+
+    .navbar-collapse {
+
+        margin-top: 30px;
+        background-color: rgba(255, 255, 255); /* Fond blanc */
+        border-radius: 10px; /* Coins arrondis */
+        padding: 10px 10px; /* Espacement interne */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    .navbar-collapse.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

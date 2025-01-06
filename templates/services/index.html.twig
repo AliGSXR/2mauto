@@ -1,0 +1,204 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Découvrez nos services{% endblock %}
+
+{% block body %}
+    <section class="header-services">
+        <div class="overlay-services">
+            <!-- Texte principal et bouton -->
+            <div class="header-services-content text-center">
+                <h1 class="header-services-title">Nos services</h1>
+            </div>
+        </div>
+    </section>
+    <div class="line"></div>
+    <section class="about-services">
+        <div class="text-about text-center">
+            <p class="about-title">Chez <span class="yello-title">2M AUTO SERVICES</span>, nous offrons des solutions professionnelles et sur mesure pour redonner
+            éclat et fraîcheur à votre véhicule, à l'intérieur comme a l'extérieur. Faites confiance à notre expertise et découvrez un services qui combine
+            qualité, efficacité et soin du détail. Explorez nos services et laissez-nous prendre soin de votre véhicule avec passion et précision !</p>
+        </div>
+    </section>
+
+    <section id="elem-c1"  class="formule-basique">
+        <div class="container">
+            <!-- Titre principal -->
+            <h1 class="formules-title">Nettoyage intérieur</h1>
+
+            <!-- Images et description -->
+            <div class="basique-content">
+                <!-- Images -->
+                <div class="formule-images">
+                    <img src="img/DSC_0936.JPG" alt="Nettoyage intérieur 1" class="basique-img col-md-4">
+                    <img src="img/DSC_0898.JPG" alt="Nettoyage intérieur 2" class="basique-img">
+                </div>
+
+                <!-- Description -->
+                <div class="formules-description">
+                    <h2>Formule <strong>BASIQUE</strong></h2>
+                    <p>Aspiration, dépoussiérage, nettoyage plastiques et vitres.</p>
+                    <button class="btn btn-outline-dark mt-3 detail-basique" data-target="#card-basique">Details</button>
+                </div>
+                <!-- Conteneur pour la carte -->
+                <div class="hidden-card mt-4" id="card-basique">
+                    <div class="card p-4">
+                        <h3 class="card-title fw-bold mb-4">Ce que comprend la <span class="gros-titre-b">Formule Basique</span> :</h3>
+                        <ul class="list-basique">
+                            <li><strong>Aspiration complète :</strong> Nous éliminons toutes les poussières et saletés des tapis, sièges, moquettes, et du coffre pour un intérieur impeccable.</li>
+                            <li><strong>Dépoussiérage minutieux :</strong> Chaque recoin est soigneusement dépoussiéré, pour un habitacle frais et agréable.</li>
+                            <li><strong>Nettoyage des plastiques :</strong> Rendez éclat et propreté aux surfaces plastiques comme le tableau de bord, les panneaux de porte et les consoles centrales grâce à un soin adapté.</li>
+                            <li><strong>Nettoyage des vitres :</strong> Des vitres parfaitement nettoyées, sans traces, pour une visibilité optimale et une finition soignée.</li>
+                        </ul>
+                        <div class="additional-info mt-4">
+                            <p><strong>Durée estimée :</strong> ⏱ Environ 1h30 et 2 heures.</p>
+                            <p><strong class="price">À partir de 60 €</strong></p>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <a href="{{ path('app_contact') }}" class="btn btn-primary" >Je réserve mon RDV</a>
+                            <button class="btn  btn-close-card mt-4" type="Fermer">FERMER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="formule-premium">
+        <div class="container">
+
+            <!-- Images et description -->
+            <div class="basique-content">
+                <!-- Images -->
+                <div class="formule-images">
+                    <img src="img/DSC_1014.JPG" alt="Nettoyage intérieur 1" class="basique-img col-md-4">
+                    <img src="img/DSC_0990.JPG" alt="Nettoyage intérieur 2" class="basique-img">
+                </div>
+
+                <!-- Description -->
+                <div class="formules-description">
+                    <h2>Formule <strong>PREMIUM</strong></h2>
+                    <p>Aspiration, dépoussiérage, nettoyage plastiques et vitres.</p>
+                    <button class="detail-premium btn btn-outline-dark mt-3 " data-target="#card-premium">Details</button>
+                </div>
+                <!-- Conteneur pour la carte -->
+                <div class="hidden-card mt-4" id="card-premium">
+                    <div class="card p-4">
+                        <h3 class="card-title fw-bold mb-4">Ce que comprend la <span class="gros-titre-p">Formule Premium</span> :</h3>
+                        <ul class="list-premium">
+                            <li><strong>Aspiration complète :</strong> Aspiration en profondeur de toutes les surfaces textiles, y compris les tapis, sièges, et coffre, pour éliminer chaque poussière et miette.</li>
+                            <li><strong>Dépoussiérage minutieux :</strong> Les recoins les plus difficiles d'accès sont soigneusement dépoussiérés pour un intérieur frais et soigné.</li>
+                            <li><strong>Nettoyage des plastiques :</strong> Rénovation du tableau de bord, des panneaux de porte et des consoles avec des produits adaptés pour un fini éclatant.</li>
+                            <li><strong>Nettoyage des vitres :</strong> Des vitres parfaitement transparentes, sans traces, pour une vue nette et une finition impeccable.</li>
+                            <li><strong>Shampoing des moquettes et sièges :</strong> Élimination des taches et rafraîchissement complet des tissus pour redonner un aspect neuf à votre intérieur.</li>
+                            <li><strong>Un parfum raffiné :</strong> Pour une touche finale, nous diffusons un parfum agréable et subtil dans votre habitacle.</li>
+                        </ul>
+                        <div class="additional-info mt-4">
+                            <p><strong>Durée estimée :</strong> ⏱ Environ 3 à 4 heures.</p>
+                            <p><strong class="price">À partir de 80 €</strong></p>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="{{ path('app_contact') }}" class="btn btn-primary" >Je réserve mon RDV</a>
+                            <button class="btn  btn-close-card mt-4" type="Fermer">FERMER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="supplements py-5">
+        <div class="container">
+            <!-- Titre -->
+            <div class="supplements-title text-center mb-4">
+                <h2>Suppléments et options</h2>
+            </div>
+
+            <!-- Contenu -->
+            <div class="supplements-content">
+                <ul class="supplements-list">
+                    <li>
+                        <span>Niveau de saleté avancé du véhicule</span>
+                        <span class="price">à partir de 10 €</span>
+                    </li>
+                    <li>
+                        <span>Poils d'animaux</span>
+                        <span class="price">15 €</span>
+                    </li>
+                    <li>
+                        <span>Entretien et soin des cuirs et alcantara</span>
+                        <span class="price">10 €</span>
+                    </li>
+                    <li>
+                        <span>SUV / MONOSPACE / Véhicule 3 portes</span>
+                        <span class="price">10 €</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="elem-c2" class="highlight-section">
+        <div class="highlight-overlay">
+            <!-- Titre -->
+            <h2 class="highlight-title">Lustrage & Polissage</h2>
+            <!-- Description -->
+            <p class="highlight-description">
+                Offrez à votre carrosserie une seconde jeunesse grâce à notre prestation de lustrage et polissage professionnel. Fini les micro-rayures, la peinture terne ou les traces d’usure ! <br>
+                Nous redonnons à votre voiture toute sa brillance d'origine, tout en protégeant sa surface contre les agressions extérieures.
+            </p>
+            <p class="highlight-result">
+                Résultat ? Une carrosserie éclatante, un effet miroir irrésistible et une finition impeccable qui fait tourner les têtes.
+            </p>
+            <!-- Texte secondaire -->
+            <p class="highlight-secondary-text">
+                Confiez-nous votre véhicule et redécouvrez le plaisir de rouler avec style !
+            </p>
+            <!-- Bouton -->
+            <a href="{{path('app_contact')}}" class="btn btn-primary highlight-button">Contactez-nous dès maintenant pour une demande de devis</a>
+        </div>
+    </section>
+
+    <section class="renovation-optique py-5">
+        <div class="container">
+            <!-- Titre principal -->
+            <div class="text-center mb-4">
+                <h1 class="renovation-title">Rénovation optique</h1>
+                <p class="renovation-subtitle">Redonnez éclat à vos phares pour seulement <strong class="renov-price">40€ la paire !</strong></p>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="row align-items-center">
+                <!-- Texte -->
+                <div class="col-lg-7">
+                    <p class="renovation-description">
+                        Offrez une seconde vie à vos optiques ternis ou jaunis grâce à notre service de rénovation optique.
+                        En une intervention rapide et professionnelle, vos phares retrouveront leur transparence et leur brillance,
+                        améliorant ainsi l'esthétique de votre véhicule et votre sécurité sur la route.
+                    </p>
+
+                    <h4>Pourquoi choisir notre service ?</h4>
+                    <ul class="renovation-benefits">
+                        <li>Meilleure visibilité et conduite plus sûre.</li>
+                        <li>Économique : évitez le remplacement coûteux des optiques.</li>
+                        <li>Une finition soignée qui rehausse l'apparence de votre voiture.</li>
+                    </ul>
+
+                    <p class="renovation-price"><strong class="price-renov">Seulement 40 € la paire</strong></p>
+                    <a href="{{path('app_contact')}}" class="btn btn-primary highlight-button">Prenez rendez-vous dès aujourd'hui et éclairez votre route avec confiance !</a>
+                </div>
+
+                <!-- Images -->
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/IMG_4382v2.JPG" alt="Après rénovation" class="renovation-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

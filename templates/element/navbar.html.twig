@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="{{ path('app_home') }}">
+            <img class="navbar-logo" src="{{ asset('img/logo2.png') }}" alt="Logo" height="50">
+        </a>
+
+        <!-- Bouton mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_home' %}active{% endif %}" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_services' %}active{% endif %}" href="{{ path('app_services') }}">Nos services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_galerie' %}active{% endif %}" href="{{ path('app_galerie') }}">Galerie</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if app.request.get('_route') == 'app_contact' %}active{% endif %}" href="{{ path('app_contact') }}">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Icônes sociales -->
+            <div class="social-icons d-flex align-items-center">
+                <a href="#"><img src="{{ asset('img/snap.png') }}" alt="Snapchat" height="20"></a>
+                <a href="#"><img src="{{ asset('img/insta.png') }}" alt="Instagram" height="30"></a>
+            </div>
+        </div>
+    </div>
+</nav>

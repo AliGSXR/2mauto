@@ -1,0 +1,517 @@
+
+
+body{
+    background-color: rgba(234, 234, 232, 1) !important;
+    font-family: "Outfit", serif;
+}
+
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.86); /* Fond blanc avec opacité à 86% */
+    height: 119px; /* Hauteur de la navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    padding: 10px 20px; /* Espacement interne */
+    display: flex;
+    align-items: center; /* Centrer verticalement le contenu */
+    position: fixed; /* Fixe la navbar en haut */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* La navbar reste au-dessus de l'image */
+}
+
+.navbar-nav{
+    display: flex;
+    gap: 80px;
+}
+.navbar-brand img {
+    height: 200px; /* Taille du logo */
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+.nav-link {
+    position: relative; /* Pour le ::after */
+    color: black !important;
+    font-family: "Outfit", serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Lien actif */
+.nav-link.active {
+    color: #FFC107 !important; /* Couleur jaune */
+    font-weight: bold;
+    border-bottom: 2px solid #FFC107;
+}
+
+/* Animation hover */
+.nav-link::after {
+    content: ""; /* Élément visuel ajouté */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: black; /* Couleur par défaut */
+    transition: width 0.3s ease; /* Animation fluide */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Barre visible au survol */
+}
+
+.nav-link:hover {
+    color: black !important; /* Couleur survol */
+}
+
+.social-icons{
+    margin-left: 250px;
+}
+
+.social-icons img {
+    align-items: center;
+    margin-left: 20px;
+}
+
+.custom-toggler {
+    border: none; /* Supprime la bordure autour du bouton */
+}
+
+.custom-toggler .navbar-toggler-icon {
+    width: 24px; /* Taille personnalisée */
+    height: 24px;
+
+}
+
+
+
+
+
+/* Section principale avec l'image de fond */
+.header-accueil {
+    position: relative; /* Position relative pour contenir l'overlay */
+    background-image: url('/img/img-no.jpg'); /* Image de fond */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centre l'image */
+    height: 100vh; /* Section prend toute la hauteur de l'écran */
+}
+
+/* Overlay pour le contenu (texte et bouton) */
+.header-accueil .overlay-accueil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+}
+
+/* Contenu centré */
+.header-accueil-content {
+    text-align: left;
+    color: white; /* Texte en blanc */
+    opacity: 0; /* Masqué au départ */
+    transform: translateY(20px); /* Légèrement décalé vers le bas */
+    animation: fadeInUp 1.5s ease-out forwards; /* Animation d'apparition */
+}
+
+/* Titre */
+.header-accueil-title {
+    background-color: rgba(255, 193, 7, 0.9); /* Fond jaune semi-transparent */
+    padding: 15px 20px;
+    font-size: 64px;
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-block;
+    font-family: "Outfit", serif;
+}
+
+/* Bouton */
+.btn-contact {
+    font-family: "Outfit", serif;
+    background-color: #FFC107;
+    color: #333;
+    border-radius: 20px;
+    font-size: 36px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 400px;
+    opacity: 0; /* Masqué initialement */
+    animation: fadeInUp 3s ease-out forwards; /* Animation après le texte */
+    animation-delay: 0.4s; /* Délai pour que le bouton apparaisse après le titre */
+}
+
+/* Keyframes pour l'animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.line {
+    width: 80%; /* La ligne occupe 80% de la largeur de l'écran */
+    max-width: 1181px;     height: 2px; /* Épaisseur de la ligne */
+    background-color: #FFC107; /* Couleur de la ligne (jaune) */
+    margin: 78.5px auto 0; /* Centrer horizontalement et espacement vertical */
+}
+
+/* Section principale */
+.about-section {
+    padding: 60px 20px;
+
+}
+
+/* Conteneur principal */
+.about-section .container {
+    display: flex;
+    flex-direction: column; /* Empile les éléments par défaut */
+    align-items: center; /* Centre tout le contenu horizontalement */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 100px;
+}
+
+/* Texte */
+.about-text {
+    width: 80%; /* Le texte prend 80% de la largeur */
+    margin-bottom: 20px; /* Espacement sous le texte */
+}
+
+.about-text h2 {
+    font-family: "Outfit", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text .highlight {
+    color: #FFC107; /* Texte en jaune */
+    font-weight: bold;
+}
+
+.about-text p {
+    font-family: "Outfit", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Image */
+.about-image {
+    width: 100%; /* L'image prend 80% de la largeur */
+    margin: 20px 0px; /* Espacement vertical autour de l'image */
+}
+
+.about-image img {
+    width: 100%; /* L'image occupe toute la largeur définie par le parent */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Bouton */
+.about-button {
+    width: 80%; /* Le bouton prend 80% de la largeur */
+    text-align: center; /* Centre le bouton */
+}
+
+.btn-light {
+    font-family: "Outfit", serif;
+    margin-top: 65px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #FFC107; /* Fond jaune au survol */
+    color: black;
+}
+
+
+/* Pourquoi nous ? */
+
+/* Section principale */
+.why-choose-us {
+    padding: 60px 20px; /* Espacement interne */
+    text-align: center; /* Centre le contenu */
+
+}
+
+/* Titre principal */
+.section-title {
+    font-family: "Outfit", serif;
+    font-size: 10px; /* Taille du titre */
+    color: black; /* Couleur du texte */
+    padding: 50px 50px;
+}
+
+/* Ligne de séparation */
+.title-divider {
+    width: 80%; /* Largeur de la ligne */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: black; /* Couleur jaune */
+    border: none; /* Supprime la bordure par défaut */
+    margin: 0px auto 100px; /* Centre et ajoute un espacement vertical */
+}
+
+/* Liste des points */
+.benefits-list {
+    list-style: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0 auto 82px 10px; /* Centre la liste */
+    text-align: left; /* Alignement à gauche */
+    color: black; /* Couleur du texte */
+    font-size: 20px; /* Taille du texte */
+    line-height: 3rem; /* Espacement entre les lignes */
+    font-family: "Outfit", serif;
+}
+
+/* Mise en valeur des titres des points */
+.benefits-list li strong {
+    color: black; /* Met en évidence avec une couleur jaune */
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: "Outfit", serif;
+
+}
+
+
+
+
+.services{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    padding-top: 84px;
+    position: relative;
+
+
+}
+
+.service-title {
+    font-size: 64px;
+    font-family: "Outfit", serif;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.service-texte {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+/* Cartes */
+
+
+
+/* Cartes */
+.service-card {
+    flex: 0 0 calc(33.33% - 20px); /* Chaque carte occupe 1/3 de la ligne */
+    max-width: 509px;
+    margin: 0 auto; /* Centre les cartes sur mobile */
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.service-card:hover{
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Augmente l'ombre au survol */
+}
+.service-card img{
+    height: 398px; /* Hauteur de l'image */
+    object-fit: cover; /* L'image s'adapte au conteneur */
+}
+.card-body{
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 20px 20px; /* Coins arrondis en bas */
+    height: 308px;
+
+}
+.card-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 39px;
+    margin-top:63px ;
+    text-align: left;
+}
+
+.card-text{
+    font-size: 1rem;
+    color: #666;
+
+    text-align: left;
+    margin-bottom: 49px ;
+}
+.card-text2{
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+    margin-bottom: 29px ;
+}
+.btn-warning {
+    background-color: #FFC107;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-left:180px ;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.btn-warning:hover {
+    background-color: #e0a800; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+
+
+/*--------------------------------------------------------------------*/
+
+.tem{
+    padding: 60px 0;
+}
+
+/* Témoignage */
+.testimonial {
+    background-color: #999999; /* Couleur de fond gris */
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    margin-bottom: 100px;
+}
+
+.testimonial .rating {
+    font-size: 24px;
+    color: #FFD700; /* Couleur des étoiles */
+}
+
+.testimonial .feedback {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.testimonial .author {
+    font-weight: bold;
+}
+
+/* Titre de section */
+
+.text-where{
+    margin-bottom: 15px;
+}
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 201px;
+}
+
+/* Localisation */
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 300px;
+    margin-left: 50px;
+}
+
+.btn-light {
+    margin-bottom: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #FFC107;
+    color: #000;
+}
+
+
+.services, .tem {
+    overflow: hidden; /* Empêche tout contenu de déborder */
+    position: relative; /* Maintient le flux normal des sections */
+}
+
+/*---------------FOOTER------------*/
+
+/* Footer général */
+.footer {
+    background-image: url('/img/DSC_1066.JPG');
+    background-size: cover;
+    background-position: 20% 50%; /* Ajuste horizontalement et verticalement */
+    background-repeat: no-repeat;
+    color: #fff; /* Texte en blanc */
+    padding: 40px 20px; /* Espacement interne */
+    text-decoration: none;
+}
+
+.footer a {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.text-footer{
+    font-size: 25px;
+}
+
+.footer-column {
+    text-align: center; /* Centre le contenu dans chaque colonne */
+    margin-bottom: 20px;
+}
+
+/* Icônes sociales */
+.social-icons-footer {
+    margin-top: 10px;
+}
+
+.social-icons-footer .icon {
+    height: 30px; /* Taille des icônes */
+    margin: 0 10px; /* Espacement entre les icônes */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons-footer .icon:hover {
+    transform: scale(1.2); /* Zoom sur l'icône au survol */
+}
+
+
+/* Footer bas */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ccc; /* Texte gris clair */
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ligne subtile */
+    padding-top: 10px;
+}
+

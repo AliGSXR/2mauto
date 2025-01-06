@@ -1,0 +1,72 @@
+.header-galerie {
+    position: relative; /* Position relative pour contenir l'overlay */
+    background-image: url('/img/DSC_0078.JPG'); /* Image de fond */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centre l'image */
+    height: 100vh; /* Section prend toute la hauteur de l'écran */
+}
+.overlay-galerie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.gallery-subtitle {
+    padding: 50px 20px;
+    font-size: 25px;
+    color: #333 ;
+    text-align: center;
+}
+
+/* Section Galerie */
+.gallery {
+
+    padding: 50px 0;
+}
+
+.gallery-title {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ici{
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 25px;
+}
+.ici:hover{
+    color: #FFC107;
+}
+
+.gallery-description {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+}
+.carousel {
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur maximale du carrousel */
+    margin: 0 auto; /* Centre le carrousel */
+    overflow: hidden; /* Cache les débordements des images */
+}
+
+.carousel-inner img {
+    border-radius: 10px;
+    height: auto;
+    background-size: cover;
+    width: 100%;
+}
+
+.row img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.row img:hover {
+    transform: scale(1.05); /* Zoom au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+

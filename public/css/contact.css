@@ -1,0 +1,117 @@
+.header-contact {
+    position: relative; /* Position relative pour contenir l'overlay */
+    background-image: url('/img/DSC_1062.JPG'); /* Image de fond */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centre l'image */
+    height: 100vh; /* Section prend toute la hauteur de l'écran */
+}
+.overlay-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.contact-page {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Couleur de fond claire */
+}
+
+.contact-page h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-page p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-page .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-page .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.contact-page .btn-primary {
+    background-color: #FFC107;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-page .btn-primary:hover {
+    background-color: #e0a800;
+    color: white;
+}
+
+.contact-number {
+    color: black; /* Couleur jaune pour correspondre au thème */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-number:hover {
+    color: #e0a800; /* Couleur légèrement plus foncée au survol */
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+
+.social-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.social-link::after {
+    content: attr(data-tooltip); /* Affiche le contenu de l'attribut data-tooltip */
+    position: absolute;
+    bottom: 100%; /* Place la bulle au-dessus */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFC107;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0; /* Masque la bulle */
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover::after {
+    opacity: 1; /* Affiche la bulle */
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px); /* Déplace légèrement la bulle vers le haut */
+}
