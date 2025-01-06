@@ -90,7 +90,7 @@ body{
 /* Section principale avec l'image de fond */
 .header-accueil {
     position: relative; /* Position relative pour contenir l'overlay */
-    background-image: url('/img/img-no.jpg'); /* Image de fond */
+    background-image: url('/img/img_no.JPG'); /* Image de fond */
     background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* Centre l'image */
     height: 100vh; /* Section prend toute la hauteur de l'écran */
