@@ -26,9 +26,15 @@
 }
 
 .contact-page p {
-    font-size: 1rem;
+    font-size: 25px;
     color: #555;
     margin-bottom: 10px;
+}
+@media (max-width: 766px){
+    .contact-page p{
+        font-size: 16px;
+        padding: 0 15px 15px 10px;
+    }
 }
 
 .contact-page .form-label {
@@ -74,6 +80,16 @@
     display: flex;
     gap: 20px;
     margin-top: 20px;
+
+}
+.social-link i{
+    font-size: 2rem;
+    color: black;
+}
+@media (max-width: 766px){
+    .social-link{
+        margin-bottom: 25px;
+    }
 }
 
 .social-icon {

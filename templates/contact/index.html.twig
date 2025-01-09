@@ -32,14 +32,24 @@
                     </p>
                     <h4>Suivez-nous sur :</h4>
                     <div class="social-links">
-                        <a href="https://snapchat.com" target="_blank" class="social-link" data-tooltip="2mauto01500">
-                            <img src="{{ asset('img/snap.png') }}" alt="Snapchat" class="social-icon">
+                        <a href="https://snapchat.com/add/m.auto01500"
+                           data-mobile-url="snapchat://add/m.auto01500"
+                           data-desktop-url="https://snapchat.com/add/m.auto01500"
+                           class="snap social-link"
+                           onclick="handleSocialClick(event)"
+                           title="Snapchat" target="_blank" data-tooltip="m.auto01500">
+                            <i class="bi bi-snapchat"></i>
                         </a>
-                        <a href="https://instagram.com" target="_blank" class="social-link" data-tooltip="2m_ Auto01">
-                            <img src="{{ asset('img/insta.png') }}" alt="Instagram" class="social-icon">
+                        <a href="https://www.instagram.com/2m_auto01/"
+                           data-mobile-url="instagram://user?username=2m_auto01"
+                           data-desktop-url="https://www.instagram.com/2m_auto01/"
+                           class="insta social-link"
+                           onclick="handleSocialClick(event)"
+                           title="Instagram" target="_blank" data-tooltip="2m_auto01">
+                            <i class="bi bi-instagram"></i>
                         </a>
                         <a href="https://facebook.com" target="_blank" class="social-link" data-tooltip="Facebook">
-                            <img src="{{ asset('img/facebook-icon.png') }}" alt="Facebook" class="social-icon">
+                            <i class="bi bi-facebook"></i>
                         </a>
                     </div>
                 </div>

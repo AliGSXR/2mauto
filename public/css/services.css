@@ -122,7 +122,11 @@
     max-width: 100%;
 
 }
-
+@media (max-width: 766px){
+    .formules-description{
+        text-align: center;
+    }
+}
 .basique-description h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -137,11 +141,11 @@
 
 .detail-basique,
 .detail-premium{
-    display: inline-block;
+
     position: absolute;
     left: 80%;
-
-    margin-bottom: 50px;
+    display: block;
+    margin: 10px auto;
     padding: 10px 20px;
     border: 2px solid black;
     background-color: transparent;
@@ -150,6 +154,16 @@
     text-decoration: none;
     font-weight: bold;
     transition: all 0.7s ease-in-out;
+}
+@media (max-width: 766px){
+    .detail-basique,
+    .detail-premium{
+    position: static;
+    margin: 10px auto;
+    width: 80%;
+    /* Supprime le positionnement absolu */}
+
+
 }
 
 .btn-details:hover {
@@ -301,7 +315,7 @@
     background: linear-gradient(90deg, #808080, #b0b0b0);
     color: white;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px;
     border-radius: 30px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -311,7 +325,7 @@
 .supplements-content {
     background-color: #a0a0a0; /* Couleur de fond pour la boîte */
     border-radius: 20px; /* Coins arrondis */
-    padding: 20px;
+    padding: 20px 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile */
 }
 
@@ -331,6 +345,12 @@
     padding-bottom: 10px; /* Espacement sous chaque élément */
     color: white;
 }
+@media (max-width: 766px){
+    .supplements-list li{
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 /* Dernier élément sans bordure */
 .supplements-list li:last-child {
@@ -347,12 +367,12 @@
 
 /* Section principale */
 .highlight-section {
-    padding: 100px;
+    padding: 50px 20px;
     position: relative;
     background-image: url('/img/DSC_1097.JPG'); /* Remplacez par l'image souhaitée */
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Hauteur de la section */
+    height: 100%; /* Hauteur de la section */
     display: flex;
     align-items: center; /* Centrer verticalement */
     justify-content: center; /* Centrer horizontalement */
@@ -374,11 +394,8 @@
 /* Overlay (fond semi-transparent) */
 .highlight-overlay {
     background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
-    padding: 40px;
+    padding: 20px;
     border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
     z-index: 2;
 }
 
@@ -435,14 +452,14 @@
 
 /* Titre principal */
 .renovation-title {
-    font-size: 64px;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
 }
 
 .renov-price{
-    font-size: 50px;
+    font-size: 1.5rem;
 }
 
 .renovation-subtitle {
@@ -452,12 +469,7 @@
 }
 
 /* Description */
-.renovation-description {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 100px;
-}
+
 h4{
     font-size: 24px;
     margin-bottom: 20px;
@@ -473,8 +485,9 @@ h4{
     line-height: 1.6;
 }
 
+.renovation-description,
 .renovation-benefits li {
-    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 /* Prix et appel à l'action */
@@ -494,8 +507,8 @@ h4{
 
 /* Images */
 .renovation-image {
-    max-width: 100%; /* L'image prend toute la largeur disponible */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    max-width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
 }
 

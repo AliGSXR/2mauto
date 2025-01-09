@@ -41,65 +41,78 @@
             <!-- Titre principal -->
             <hr class="title-divider">
             <h2 class="section-title">Pourquoi choisir 2M AUTO SERVICES ?</h2>
-
-
             <!-- Liste des points -->
-            <ul class="benefits-list">
-                <li><strong>Soin personnalisé</strong> : Chaque véhicule est unique, et nous adaptons nos services pour répondre parfaitement à ses besoins spécifiques.</li>
-                <li><strong>Rapidité et efficacité</strong> : Un service professionnel, sans compromis sur la qualité, pour un résultat impeccable dans les meilleurs délais.</li>
-                <li><strong>Matériel de pointe</strong> : Nous utilisons des outils et des produits haut de gamme pour garantir un nettoyage optimal.</li>
-                <li><strong>Prix compétitifs</strong> : Une qualité premium accessible à tous, avec des forfaits adaptés à tous les budgets.</li>
-                <li><strong>Transparence totale</strong> : Pas de coûts cachés! Vous savez exactement ce que vous payez.</li>
-                <li><strong>Satisfaction garantie</strong> : Votre satisfaction est notre priorité absolue. Si vous n’êtes pas satisfait, nous nous engageons à corriger les moindres détails.</li>
-                <li><strong>Expérience locale</strong> : Entreprise implantée à Ambérieu-en-Bugey, nous sommes proches de nos clients et comprenons leurs attentes.</li>
-            </ul>
-        </div>
+            <div class="row benefits-list">
+                <div class="card col-md-5 col-sm-12 mb-4">
+                    <div class="card-body">
+                        <h2><strong>Soin personnalisé</strong></h2>
+                        <p>Chaque véhicule est unique, et nous adaptons nos services pour répondre parfaitement à ses besoins spécifiques.</p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-12 mb-4">
+                <div class="card-body ">
+                        <h2><strong>Rapidité et efficacité</strong></h2>
+                        <p>Un service professionnel, sans compromis sur la qualité, pour un résultat impeccable dans les meilleurs délais.</p>
+                </div>
+                </div>
+            <div class="card col-md-4 col-sm-12 mb-4">
+                    <div class="card-body ">
+                        <h2><strong>Satisfaction garantie</strong></h2>
+                        <p>Votre satisfaction est notre priorité absolue. Si vous n’êtes pas satisfait, nous nous engageons à corriger les moindres détails.</p>
+                    </div>
+            </div>
+            <div class="card col-md-7 col-sm-12 mb-4">
+                    <div class="card-body ">
+                        <h2><strong>Expérience locale</strong></h2>
+                        <p>Entreprise implantée à Ambérieu-en-Bugey, nous sommes proches de nos clients et comprenons leurs attentes.</p>
+                    </div>
+            </div>
+                <div class="card col-md-3 col-sm-12 mb-4">
+                    <div class="card-body">
+                        <h2><strong>Matériel de pointe</strong></h2>
+                        <p>Nous utilisons des outils et des produits haut de gamme pour garantir un nettoyage optimal.</p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-12 mb-4">
+                    <div class="card-body">
+                        <h2><strong>Prix compétitifs</strong></h2>
+                        <p>Une qualité premium accessible à tous, avec des forfaits adaptés à tous les budgets.</p>
+                    </div>
+                </div>
+                <div class="card col-md-4 col-sm-12 mb-4 ">
+                    <div class="card-body">
+                        <h2><strong>Transparence totale</strong></h2>
+                        <p>Pas de coûts cachés! Vous savez exactement ce que vous payez.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
     </section>
 
     <section class="services">
-        <div class="container text-center">
+        <section class="container text-center">
             <h2 class="service-title">Nos Services</h2>
             <p class="service-texte">Découvrez nos services de detailing intérieur et extérieur pour particuliers et professionnels</p>
             <!-- Cartes -->
             <div class="row">
-                <!-- Card 1 -->
+                {% for service in services %}<!-- Card 1 -->
                 <div class="col-md-4 col-sm-12 mb-4">
                     <div class="card service-card">
-                        <img src="{{ asset('img/DSC_0894.jpg') }}" class="card-img-top rounded-top" alt="Nettoyage intérieur">
+                        <img src="{{ asset('img/' ~ service.image ) }}" class="card-img-top rounded-top" alt="{{service.name}}">
                         <div class="card-body">
-                            <h5 class="card-title">Nettoyage intérieur</h5>
-                            <p class="card-text">Formules BASIQUE et PREMIUM pour un intérieur impeccable et rafraîchissant.</p>
-                            <a href="{{ path('app_services') }}#elem-c1" class="btn btn-warning">En savoir +</a>
+                            <h5 class="card-title">{{ service.name }}</h5>
+                            <p class="card-text">{{ service.description }}</p>
+                            <a href="{{ path('app_services') }}" class="btn btn-warning">En savoir +</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="col-md-4 col-sm-12 mb-4">
-                    <div class="card service-card">
-                        <img src="{{ asset('img/DSC_1097.jpg') }}" class="card-img-top rounded-top" alt="Lustrage et Polissage">
-                        <div class="card-body">
-                            <h5 class="card-title">Lustrage et Polissage</h5>
-                            <p class="card-text2">Restauration de la brillance de votre véhicule avec nos services de lustrage et polissage professionnels.</p>
-                            <a href="{{ path('app_services') }}#elem-c2" class="btn btn-warning">En savoir +</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-md-4 col-sm-12 mb-4">
-                    <div class="card service-card">
-                        <img src="{{ asset('img/IMG_4382v2.jpg') }}" class="card-img-top rounded-top" alt="Rénovation de phares">
-                        <div class="card-body">
-                            <h5 class="card-title">Rénovation de phares pour une meilleure visibilité</h5>
-                            <p class="card-text">Rénovation de vos phares.</p>
-                            <a href="#" class="btn btn-warning">En savoir +</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
-        </div>
+        </section>
     </section>
+
 
     <section class="tem mt-lg-5">
         <div class="container">
@@ -110,15 +123,28 @@
                     <img src="{{ asset('img/DSC_1103.JPG') }}" alt="Car detailing" class="img-fluid rounded">
                 </div>
                 <!-- Témoignage -->
+                {% if avisselection %}
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="testimonial p-4 rounded">
                         <p class="rating">
-                            <span>★★★★★</span>
+                            {% for i in 1..avisselection.note %}
+                            <span>★</span>
+                            {% endfor %}
                         </p>
-                        <p class="feedback">Service impeccable, mon véhicule brille comme jamais après le detailing. Je recommande vivement 2m auto services !</p>
-                        <p class="author">Mimoun K.</p>
+                        <p class="feedback">{{ avisselection.commentaire }}</p>
+                        <p class="author">{{ avisselection.auteur }}</p>
                     </div>
                 </div>
+                {% else %}
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="testimonial p-4 rounded">
+
+                            <p class="feedback"> Aucun avis pour le moment</p>
+
+                        </div>
+                    </div>
+
+                {% endif %}
             </div>
 
             <!-- Localisation Section -->

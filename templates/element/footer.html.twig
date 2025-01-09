@@ -15,15 +15,33 @@
             <!-- Colonne 3 : Contact -->
             <div class="contact-footer col-md-4 footer-column">
                 <a class="text-footer" href="">Contact</a>
-                <p><i class="bi bi-telephone"></i> 06 38 05 03 84</p>
+                <p><a href="tel:0638050384" class="contact-number"><i class="bi bi-telephone"></i>06 38 05 03 84</a> <br>
+                    <a href="tel:0631517309" class="contact-number"><i class="bi bi-telephone"></i>06 31 51 73 09</a></p>
+
                 <p><i class="bi bi-geo-alt"></i> 315 Rue des mouettes,<br> 01500 AMBERIEU EN BUGEY</p>
 
             </div>
         </div>
         <div class="social-icons-footer">
-            <a href="#"><img src="{{ asset('img/insta-v2 (1).png') }}" alt="Instagram" class="icon"></a>
-            <a href="#"><img src="{{ asset('img/Snapv2 (1).png') }}" alt="Snapchat" class="icon"></a>
-            <a href="#"><img src="{{ asset('img/facebook.png') }}" alt="Facebook" class="icon"></a>
+            <a href="https://snapchat.com/add/m.auto01500"
+               data-mobile-url="snapchat://add/m.auto01500"
+               data-desktop-url="https://snapchat.com/add/m.auto01500"
+               class="social-link"
+               onclick="handleSocialClick(event)"
+               title="Snapchat" target="_blank" data-tooltip="m.auto01500" >
+                <i class="bi bi-snapchat"></i>
+            </a>
+            <a href="https://www.instagram.com/2m_auto01/"
+               data-mobile-url="instagram://user?username=2m_auto01"
+               data-desktop-url="https://www.instagram.com/2m_auto01/"
+               class="social-link"
+               onclick="handleSocialClick(event)"
+               title="Instagram" target="_blank" data-tooltip="2m_auto01" >
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-link" data-tooltip="Facebook">
+                <i class="bi bi-facebook"></i>
+            </a>
         </div>
 
         <!-- Copyright -->

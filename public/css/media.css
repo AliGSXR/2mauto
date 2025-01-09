@@ -3,6 +3,9 @@
         margin-bottom: 150px; /* Ajuste l'espacement pour mobile */
 
     }
+    .service-title{
+        font-size: 1.5rem;
+    }
     .map{
         text-align: center;
         margin: 80px auto 150px;
@@ -13,13 +16,16 @@
         margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
     }
     .header-accueil-title{
-        font-size: 24px;
-        margin-bottom: 150px;
+        font-size: 10px;
+        margin-bottom: 1px;
         margin-top: 100px;
     }
     .btn-warning{
-        width: 110px;
+        width: 80%;
+        margin: 0px auto 20px;
+        position: static;
     }
+
     .about-title {
             font-size: 16px !important; /* Réduit la taille du texte */
             line-height: 1.4; /* Réduit l'espacement entre les lignes */
@@ -32,11 +38,7 @@
         padding: 20px !important; /* Réduction du padding global */
     }
 
-    .detail-basique,
-    .detail-premium{
-        display: flex;
-        justify-content: center;
-    }
+
 
 
 }
@@ -125,3 +127,4 @@
         opacity: 1;
     }
 }
+
