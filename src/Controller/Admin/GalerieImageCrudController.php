@@ -23,7 +23,7 @@ class GalerieImageCrudController extends AbstractCrudController
     {
         return [
             ImageField::new('image', 'Image')
-            ->setBasePath('/public/uploads')
+            ->setBasePath('/uploads')
             ->setUploadDir('public/uploads')
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setRequired(true),

@@ -5,6 +5,10 @@ body{
     font-family: "Outfit", serif;
 }
 
+h2{
+    font-size: 2rem;
+}
+
 .navbar-custom {
     background-color: rgba(255, 255, 255, 0.86); /* Fond blanc avec opacité à 86% */
     height: 119px; /* Hauteur de la navbar */
@@ -64,17 +68,24 @@ body{
     color: black !important; /* Couleur survol */
 }
 
-.social-icons{
+
+.collapse .social-links{
     margin-left: 250px;
+    gap: 20px;
 }
 
 .social-icons img {
     align-items: center;
     margin-left: 20px;
+
 }
 
-.custom-toggler {
-    border: none; /* Supprime la bordure autour du bouton */
+.navbar-toggler {
+
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    padding: 15px; /* Espacement intérieur */
+    border: none;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -87,10 +98,12 @@ body{
 
 
 
+
+
 /* Section principale avec l'image de fond */
 .header-accueil {
     position: relative; /* Position relative pour contenir l'overlay */
-    background-image: url('/img/img_no.JPG'); /* Image de fond */
+    background-image: url('/img/DSC_0411.JPG'); /* Image de fond */
     background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* Centre l'image */
     height: 100vh; /* Section prend toute la hauteur de l'écran */
@@ -218,9 +231,10 @@ body{
 }
 
 /* Bouton */
-.about-button {
+.about-text .btn {
     width: 80%; /* Le bouton prend 80% de la largeur */
     text-align: center; /* Centre le bouton */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
 }
 
 .btn-light {
@@ -259,10 +273,14 @@ body{
     color: black; /* Couleur du texte */
     padding: 0 0 30px 0;
 }
+
+.section-title span{
+    color: #eab308;
+}
 @media(max-width: 500px){
     .section-title{
         text-align: center;
-        font-size: 22px !important;
+        font-size: 2.5rem !important;
     }
 }
 
@@ -384,8 +402,14 @@ body{
     background-color: white;
     padding: 20px;
     border-radius: 0 0 20px 20px; /* Coins arrondis en bas */
-    height: 308px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+}
+.card-img-top{
+    background-size: cover;
 }
 .card-title{
     font-size: 1.25rem;
@@ -414,14 +438,15 @@ body{
     color: black;
     border: none;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 10px 40px;
     font-weight: bold;
-    margin-left: 80% ;
+    display: inline-block;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .btn-warning:hover {
-    background-color: #e0a800; /* Couleur plus foncée au survol */
+    background-color:#666666; /* Couleur plus foncée au survol */
     transform: scale(1.05); /* Légère mise en avant au survol */
+    color: whitesmoke;
 }
 
 
@@ -429,7 +454,7 @@ body{
 /*--------------------------------------------------------------------*/
 
 .tem{
-    padding: 60px 0;
+    padding: 10px 0;
 }
 
 /* Témoignage */
@@ -439,7 +464,7 @@ body{
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .testimonial .rating {
@@ -466,7 +491,7 @@ body{
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-top: 201px;
+    margin-top: 50px;
 }
 
 /* Localisation */
@@ -474,10 +499,14 @@ body{
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 300px;
-    margin-left: 50px;
+    width: auto;
+    height: auto;
+    margin-top: 30%;
 }
 
+.text-where .btn{
+    width: 80%;
+}
 .btn-light {
     margin-bottom: 50px;
     display: inline-block;

@@ -30,9 +30,26 @@
             </ul>
 
             <!-- Icônes sociales -->
-            <div class="social-icons d-flex align-items-center">
-                <a href="#"><img src="{{ asset('img/snap.png') }}" alt="Snapchat" height="20"></a>
-                <a href="#"><img src="{{ asset('img/insta.png') }}" alt="Instagram" height="30"></a>
+            <div class="social-links d-flex align-items-center">
+                <a href="https://snapchat.com/add/m.auto01500"
+                   data-mobile-url="snapchat://add/m.auto01500"
+                   data-desktop-url="https://snapchat.com/add/m.auto01500"
+                   class="snap social-link"
+                   onclick="handleSocialClick(event)"
+                   title="Snapchat" target="_blank" data-tooltip="m.auto01500">
+                    <i class="bi bi-snapchat"></i>
+                </a>
+                <a href="https://www.instagram.com/2m_auto01/"
+                   data-mobile-url="instagram://user?username=2m_auto01"
+                   data-desktop-url="https://www.instagram.com/2m_auto01/"
+                   class="insta social-link"
+                   onclick="handleSocialClick(event)"
+                   title="Instagram" target="_blank" data-tooltip="2m_auto01">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="social-link" data-tooltip="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
             </div>
         </div>
     </div>

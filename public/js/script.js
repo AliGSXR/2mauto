@@ -136,3 +136,75 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleScroll); // Vérifiez à chaque scroll
     handleScroll(); // Vérifiez une fois au chargement
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollElements = document.querySelectorAll('.scroll-animation');
+
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <=
+            (window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100)
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('scroll-visible');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('scroll-visible');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 90)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    // Ajout d'un écouteur d'événement pour le défilement
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Exécutez l'animation au chargement pour les éléments déjà visibles
+    handleScrollAnimation();
+});
+
+
+//FACTURE
+
+document.addEventListener('DOMContentLoaded', function () {
+    const serviceRows = document.querySelectorAll('[data-field-name="serviceFacts"]');
+    const totalHTCField = document.querySelector('[data-field-name="totalHTC"]');
+    const tvaField = document.querySelector('[data-field-name="tva"]');
+    const totalTTCField = document.querySelector('[data-field-name="totalTTC"]');
+    const tauxTVA = 20;
+
+    function calculateTotals() {
+        let totalHTC = 0;
+
+        serviceRows.forEach(row => {
+            const quantity = parseFloat(row.querySelector('[data-field-name="quantity"]').value) || 0;
+            const unitPrice = parseFloat(row.querySelector('[data-field-name="unitPrix"]').value) || 0;
+            totalHTC += quantity * unitPrice;
+        });
+
+        const tva = totalHTC * (tauxTVA / 100);
+        const totalTTC = totalHTC + tva;
+
+        totalHTCField.value = totalHTC.toFixed(2);
+        tvaField.value = tva.toFixed(2);
+        totalTTCField.value = totalTTC.toFixed(2);
+    }
+
+    serviceRows.forEach(row => {
+        row.addEventListener('input', calculateTotals);
+    });
+
+    calculateTotals(); // Initial calculation
+});

@@ -1,10 +1,24 @@
+img.ea-thumbnail {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
 @media (max-width: 768px) {
+
+    h2{
+
+    }
     .services {
         margin-bottom: 150px; /* Ajuste l'espacement pour mobile */
 
     }
     .service-title{
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
     .map{
         text-align: center;
@@ -16,7 +30,8 @@
         margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
     }
     .header-accueil-title{
-        font-size: 10px;
+        padding: 1px;
+        font-size: 25px;
         margin-bottom: 1px;
         margin-top: 100px;
     }
@@ -68,10 +83,32 @@
         height: 250px;
     }
 
+    .collapse .social-links{
+        justify-content: center;
+        margin: 25px 0;
+        padding: 15px;
+
+    }
+
+    .collapse .nav-item{
+        text-align: center;
+
+    }
+
+    .nav-link{
+        margin: 10px auto;
+    }
+
+    .navbar-nav{
+        gap: 10px;
+    }
+
     .navbar-brand img {
         display: flex;
         justify-content: center;
     }
+
+
 
     .hero-title {
         margin-top: 200px;
@@ -111,20 +148,25 @@
 
 @media(max-width: 766px) {
 
+    /* Menu déroulant */
     .navbar-collapse {
-
-        margin-top: 30px;
-        background-color: rgba(255, 255, 255); /* Fond blanc */
-        border-radius: 10px; /* Coins arrondis */
-        padding: 10px 10px; /* Espacement interne */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        transform: translateY(-10px);
-        opacity: 0;
+        position: fixed; /* Fixe le menu pour qu'il se déplace indépendamment */
+        top: 30%;
+        border-top-left-radius : 20px;
+        border-bottom-left-radius: 20px;
+        right: -100%; /* Commence en dehors de l'écran à droite */
+        height: auto; /* Prend toute la hauteur */
+        width: 40%; /* Largeur du menu (modifiable) */
+        background-color: white; /* Fond blanc */
+        opacity: 0.9;
+        transition: all 0.3s ease; /* Transition fluide */
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+        z-index: 1050; /* Assure que le menu est au-dessus du contenu */
     }
+
+    /* Lorsque le menu est ouvert */
     .navbar-collapse.show {
-        transform: translateY(0);
-        opacity: 1;
+        right: 0; /* Ramène le menu visible */
     }
 }
 

@@ -4,7 +4,11 @@ namespace App\Controller\Admin;
 
 
 use App\Entity\Avis;
+use App\Entity\Client;
 use App\Entity\GalerieImage;
+use App\Entity\Invoice;
+use App\Entity\ServiceFact;
+use App\Entity\ServiceOption;
 use App\Entity\Services;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -34,6 +38,12 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Services', 'fas fa-briefcase', Services::class);
         yield MenuItem::linkToCrud('Avis', 'fa fa-star', Avis::class);
         yield MenuItem::linkToCrud('Galerie', 'fa fa-images', GalerieImage::class);
+
+        yield MenuItem::section('Factures');
+        yield MenuItem::linkToCrud('Facturation', 'fa fa-star', Invoice::class);
+        yield MenuItem::linkToCrud('Services Facturation', 'fa fa-star', ServiceFact::class);
+        yield MenuItem::linkToCrud('Clients', 'fa fa-star', Client::class );
+        yield MenuItem::linkToCrud('Suppléments', 'fa fa-star', ServiceOption::class );
 
         yield MenuItem::section('Accès rapide');
         yield MenuItem::linkToUrl('Voir le site', 'fa fa-eye', '/');

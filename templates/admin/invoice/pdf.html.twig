@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Facture #{{ invoice.id }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 16px;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            max-width: 150px;
+        }
+
+        .company-info {
+            font-size: 12px;
+            text-align: left;
+
+        }
+        .company-info p{
+            position: absolute;
+            left: 120px;
+            top: 0;
+            line-height: 1.2;
+        }
+
+        .invoice-info {
+            text-align: left;
+            margin-left: 40%;
+            line-height: 0.8;
+        }
+
+        .invoice-info h1 {
+            font-size: 20px;
+            margin-top: 100px;
+            background-color: #facc15;
+            padding-top: 5px;
+        }
+
+        .invoice-info p{
+            font-size: 14px;
+        }
+
+        .details {
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            font-size: 12px;
+            margin-left: auto;
+        }
+
+        .total-header{
+            background-color: #0a0a0a;
+            color: #facc15;
+            padding: 5px;
+        }
+
+        .total-header span{
+            padding-left:100px ;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #0a0a0a;
+            font-weight: bold;
+            color: #facc15;
+        }
+
+        .totals {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .totals p {
+            margin: 5px 0;
+        }
+
+        .footer {
+            font-size: 8px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #888;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="company-info">
+            <img src="{{ absolute_url(asset('img/logo.png')) }}" alt="Logo" width="80px" height="80px">
+            <p>315 Rue des mouettes<br>01500 AMBERIEU EN BUGEY<br>2mauto@gmail.com<br>06 38 05 03 84 - 06 31 51 73 09</p>
+        </div>
+
+        <!-- Client Details -->
+        <div class="details">
+            <p><strong>A l'intention de :</strong></p>
+            <p>{{ invoice.clientName }}</p>
+            <p>{{ invoice.street }}</p>
+            <p>{{ invoice.postalCode }} {{ invoice.city }}</p>
+            <p>{{ invoice.plaqueImmatriculation }}</p>
+        </div>
+        <div class="invoice-info">
+            <h1>Facture Récapitulative</h1>
+            <p>Facture n°#{{ invoice.id }}{{ invoice.Date|date('mY') }}</p>
+            <p>{{ invoice.Date|date('d/m/Y') }}</p>
+            <p>Date d'échéance : {{ invoice.dateEcheance|date('d/m/Y') }}</p>
+            <p class="total-header"><strong>Total à payer en euros<span>{{ totalTTC|number_format(2, ',', ' ') }} €</span></strong></p>
+        </div>
+    </div>
+
+    <!-- Client Details -->
+
+
+    <!-- Tableau des services -->
+    <h3>Services</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Quantité</th>
+            <th>Prix unitaire</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for serviceFact in invoice.serviceFacts %}
+            <tr>
+                <td>{{ serviceFact.description }}</td>
+                <td>{{ serviceFact.quantity }}</td>
+                <td>{{ serviceFact.unitPrix|number_format(2, ',', ' ') }} €</td>
+                <td>{{ (serviceFact.quantity * serviceFact.unitPrix)|number_format(2, ',', ' ') }} €</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Tableau des suppléments -->
+    <h3>Suppléments</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Prix</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for supplement in supplements %}
+            <tr>
+                <td>{{ supplement.name }}</td>
+                <td>{{ supplement.prix|number_format(2, ',', ' ') }} €</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Totaux -->
+    <div class="totals">
+        <p><strong>Total HT :</strong> {{ totalHT|number_format(2, ',', ' ') }} €</p>
+        <p><strong>TVA (0%) :</strong> {{ tva|number_format(2, ',', ' ') }} €</p>
+        <p><strong>Total TTC :</strong> {{ totalTTC|number_format(2, ',', ' ') }} €</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Merci pour votre confiance !</p>
+        <p>315 Rue des mouettes, 01500 AMBERIEU EN BUGEY</p>
+        <p>06 38 05 03 84 - 06 31 51 73 09</p>
+        <p>SIREN 953 026 861 - SIRET 953 026 861 00013 - TVA:FR66953026861 - Entretien et réparation de véhicules automobiles légers</p>
+    </div>
+</div>
+</body>
+</html></html>

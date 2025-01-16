@@ -28,7 +28,7 @@ class ServicesCrudController extends AbstractCrudController
             ImageField::new('image', 'Image')
             ->setBasePath('/public/uploads')
             ->setUploadDir('/public/uploads')
-            ->setUploadedFileNamePattern('[randomhash]-[filename]-[extension]')
+            ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setRequired(false),
         ];
     }

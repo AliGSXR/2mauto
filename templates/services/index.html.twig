@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Découvrez nos services{% endblock %}
+{% block meta_description %}
+    Explorez nos services de detailing automobile : nettoyage intérieur, lustrage et polissage, rénovation optique. Prenez rendez-vous dès maintenant !.
+{% endblock %}
 
 {% block body %}
     <section class="header-services">
@@ -126,8 +129,12 @@
                         <span class="price">à partir de 10 €</span>
                     </li>
                     <li>
+                        <span>Bloc moteur</span>
+                        <span class="price">30 €</span>
+                    </li>
+                    <li>
                         <span>Poils d'animaux</span>
-                        <span class="price">15 €</span>
+                        <span class="price">à partir de 10 €</span>
                     </li>
                     <li>
                         <span>Entretien et soin des cuirs et alcantara</span>
@@ -136,6 +143,10 @@
                     <li>
                         <span>SUV / MONOSPACE / Véhicule 3 portes</span>
                         <span class="price">10 €</span>
+                    </li>
+                    <li>
+                        <span>Délogotage</span>
+                        <span class="price">Sur Devis</span>
                     </li>
                 </ul>
             </div>
@@ -165,35 +176,41 @@
 
     <section class="renovation-optique py-5">
         <div class="container">
-            <!-- Conteneur du titre principal et sous-titre avec image -->
-            <div class="row align-items-center text-center mb-4">
-                <!-- Subtitle -->
-                <div class="col-6 renovation-subtitle">
-                    <p>Redonnez éclat à vos phares pour seulement <strong class="renov-price">40€ la paire !</strong></p>
-                </div>
-                <!-- Image -->
-                <div class="col-6 renovation-image-container">
-                    <img src="img/IMG_4382v2.JPG" alt="Après rénovation" class="renovation-image">
-                </div>
+            <!-- Titre principal et sous-titre -->
+            <div class="text-center mb-4 scroll-animation" data-animation="fade-in">
+                <h2 class="renovation-title">Rénovation Optique</h2>
+                <p class="renovation-subtitle">
+                    Redonnez éclat à vos phares pour seulement <strong class="renov-price">40€ la paire !</strong>
+                </p>
             </div>
 
-            <!-- Contenu principal (description et avantages) -->
+            <!-- Contenu principal -->
             <div class="row align-items-center">
-                <!-- Texte -->
-                <div class="col-lg-7">
+                <!-- Colonne image -->
+                <div class="col-lg-6 text-center mb-4 mb-lg-0 scroll-animation" data-animation="slide-right">
+                    <img src="img/collage.png" alt="Après rénovation" class="renovation-image img-fluid shadow rounded">
+                </div>
+                <!-- Colonne texte -->
+                <div class="col-lg-6 scroll-animation" data-animation="slide-left">
                     <p class="renovation-description">
                         Offrez une seconde vie à vos optiques ternis ou jaunis grâce à notre service de rénovation optique.
                         En une intervention rapide et professionnelle, vos phares retrouveront leur transparence et leur brillance,
                         améliorant ainsi l'esthétique de votre véhicule et votre sécurité sur la route.
                     </p>
-                    <h4>Pourquoi choisir notre service ?</h4>
-                    <ul class="renovation-benefits">
-                        <li>Meilleure visibilité et conduite plus sûre.</li>
-                        <li>Économique : évitez le remplacement coûteux des optiques.</li>
-                        <li>Une finition soignée qui rehausse l'apparence de votre voiture.</li>
+                    <h4>Pourquoi choisir notre service ?</h4>
+                    <ul class="renovation-benefits list-unstyled">
+                        <li><i class="bi bi-check-circle text-success"></i> Meilleure visibilité et conduite plus sûre.</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Économique : évitez le remplacement coûteux des optiques.</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Une finition soignée qui rehausse l'apparence de votre voiture.</li>
                     </ul>
-                    <p class="renovation-price"><strong class="price-renov">Seulement 40 € la paire</strong></p>
-                    <a href="{{ path('app_contact') }}" class="btn btn-primary highlight-button">Prenez rendez-vous dès aujourd'hui et éclairez votre route avec confiance !</a>
+                    <p class="renovation-price text-center mt-3">
+                        <strong class="price-renov">Seulement 40 € la paire !</strong>
+                    </p>
+                    <div class="text-center mt-3">
+                        <a href="{{ path('app_contact') }}" class="btn btn-primary highlight-button">
+                            Prenez rendez-vous dès aujourd'hui !
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
