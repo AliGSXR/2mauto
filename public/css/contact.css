@@ -13,6 +13,39 @@
     height: 100%;
 
 }
+
+.header-ml {
+    position: relative; /* Position relative pour contenir l'overlay */
+    background-image: url('/img/DSC_0411.JPG'); /* Image de fond */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centre l'image */
+    height: 100vh; /* Section prend toute la hauteur de l'écran */
+    margin-bottom: 20px;
+}
+.overlay-ml {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ml-content{
+    margin-bottom: 100px;
+}
+
+.header-ml-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    align-items: center;
+    text-align: center;
+    color: white; /* Texte en blanc */
+    opacity: 0; /* Masqué au départ */
+    transform: translateY(20px); /* Légèrement décalé vers le bas */
+    animation: slideInFromLeft 1s ease-out forwards; /* Applique l'animation */
+}
 .contact-page {
     padding: 60px 20px;
     background-color: #f9f9f9; /* Couleur de fond claire */
@@ -26,7 +59,7 @@
 }
 
 .contact-page p {
-    font-size: 25px;
+    font-size: 18px;
     color: #555;
     margin-bottom: 10px;
 }
