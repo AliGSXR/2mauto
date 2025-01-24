@@ -29,7 +29,7 @@ class ContactController extends AbstractController
                 // Créer l'e-mail
                 $emailMessage = (new Email())
                     ->from($email) // L'adresse e-mail du visiteur
-                    ->to('ali.test2025.beta@gmail.com') // Votre adresse e-mail
+                    ->to('2m.auto01500@gmail.com') // Votre adresse e-mail
                     ->subject($subject)
                     ->html( // Contenu HTML de l'e-mail
                         "<h2>Demande de contact</h2>

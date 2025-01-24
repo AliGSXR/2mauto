@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
             <link href="{{ asset('css/style.css') }}" rel="stylesheet">
             <link rel="stylesheet" href="{{ asset('css/media.css') }}" >
             <link rel="stylesheet" href="{{ asset('css/services.css') }}">
@@ -22,6 +23,7 @@
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
