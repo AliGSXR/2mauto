@@ -1,14 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Découvrez nos services{% endblock %}
-{% block meta_description %}
-    Explorez nos services de detailing automobile : nettoyage intérieur, lustrage et polissage, rénovation optique. Prenez rendez-vous dès maintenant !.
-{% endblock %}
+{% block meta_description %}Explorez nos services de detailing automobile : nettoyage intérieur, lustrage et polissage, rénovation optique. Prenez rendez-vous dès maintenant !.{% endblock %}
+{% block meta_keywords %}services detailing auto, nettoyage intérieur voiture, rénovation optique phares, polissage carrosserie, lustrage carrosserie voiture, protection céramique automobile, nettoyage moteur voiture, nettoyage automobile professionnel, detailing auto professionnel{% endblock %}
 
 {% block body %}
     <section class="header-services">
         <div class="overlay-services">
-            <!-- Texte principal et bouton -->
             <div class="header-services-content text-center">
                 <h1 class="header-services-title">Nos services</h1>
             </div>
@@ -25,24 +23,19 @@
 
     <section id="elem-c1"  class="formule-basique">
         <div class="container">
-            <!-- Titre principal -->
             <h1 class="formules-title">Nettoyage intérieur</h1>
 
-            <!-- Images et description -->
             <div class="basique-content">
-                <!-- Images -->
                 <div class="formule-images">
                     <img src="img/DSC_0936.JPG" alt="Nettoyage intérieur 1" class="basique-img col-md-4">
                     <img src="img/DSC_0898.JPG" alt="Nettoyage intérieur 2" class="basique-img">
                 </div>
 
-                <!-- Description -->
                 <div class="formules-description">
                     <h2>Formule <strong>BASIQUE</strong></h2>
                     <p>Aspiration, dépoussiérage, nettoyage plastiques et vitres.</p>
                     <button class="btn btn-outline-dark mt-3 detail-basique" data-target="#card-basique">Details</button>
                 </div>
-                <!-- Conteneur pour la carte -->
                 <div class="hidden-card mt-4" id="card-basique">
                     <div class="card p-4">
                         <h3 class="card-title fw-bold mb-4">Ce que comprend la <span class="gros-titre-b">Formule Basique</span> :</h3>
@@ -72,21 +65,17 @@
     <section class="formule-premium">
         <div class="container">
 
-            <!-- Images et description -->
             <div class="basique-content">
-                <!-- Images -->
                 <div class="formule-images">
                     <img src="img/DSC_1014.JPG" alt="Nettoyage intérieur 1" class="basique-img col-md-4">
                     <img src="img/DSC_0990.JPG" alt="Nettoyage intérieur 2" class="basique-img">
                 </div>
 
-                <!-- Description -->
                 <div class="formules-description">
                     <h2>Formule <strong>PREMIUM</strong></h2>
                     <p>Aspiration, dépoussiérage, nettoyage plastiques et vitres.</p>
                     <button class="detail-premium btn btn-outline-dark mt-3 " data-target="#card-premium">Details</button>
                 </div>
-                <!-- Conteneur pour la carte -->
                 <div class="hidden-card mt-4" id="card-premium">
                     <div class="card p-4">
                         <h3 class="card-title fw-bold mb-4">Ce que comprend la <span class="gros-titre-p">Formule Premium</span> :</h3>
@@ -116,12 +105,10 @@
 
     <section class="supplements py-5">
         <div class="container">
-            <!-- Titre -->
             <div class="supplements-title text-center mb-4">
                 <h2>Suppléments et options</h2>
             </div>
 
-            <!-- Contenu -->
             <div class="supplements-content">
                 <ul class="supplements-list">
                     <li>
@@ -155,9 +142,7 @@
 
     <section id="elem-c2" class="highlight-section">
         <div class="highlight-overlay">
-            <!-- Titre -->
             <h2 class="highlight-title">Lustrage & Polissage</h2>
-            <!-- Description -->
             <p class="highlight-description">
                 Offrez à votre carrosserie une seconde jeunesse grâce à notre prestation de lustrage et polissage professionnel. Fini les micro-rayures, la peinture terne ou les traces d’usure ! <br>
                 Nous redonnons à votre voiture toute sa brillance d'origine, tout en protégeant sa surface contre les agressions extérieures.
@@ -165,32 +150,25 @@
             <p class="highlight-result">
                 Résultat ? Une carrosserie éclatante, un effet miroir irrésistible et une finition impeccable qui fait tourner les têtes.
             </p>
-            <!-- Texte secondaire -->
             <p class="highlight-secondary-text">
                 Confiez-nous votre véhicule et redécouvrez le plaisir de rouler avec style !
             </p>
-            <!-- Bouton -->
             <a href="{{path('app_contact')}}" class="btn btn-primary highlight-button">Contactez-nous dès maintenant pour une demande de devis</a>
         </div>
     </section>
 
     <section class="renovation-optique py-5">
         <div class="container">
-            <!-- Titre principal et sous-titre -->
             <div class="text-center mb-4 scroll-animation" data-animation="fade-in">
                 <h2 class="renovation-title">Rénovation Optique</h2>
                 <p class="renovation-subtitle">
                     Redonnez éclat à vos phares pour seulement <strong class="renov-price">40€ la paire !</strong>
                 </p>
             </div>
-
-            <!-- Contenu principal -->
             <div class="row align-items-center">
-                <!-- Colonne image -->
                 <div class="col-lg-6 text-center mb-4 mb-lg-0 scroll-animation" data-animation="slide-right">
                     <img src="img/collage.png" alt="Après rénovation" class="renovation-image img-fluid shadow rounded">
                 </div>
-                <!-- Colonne texte -->
                 <div class="col-lg-6 scroll-animation" data-animation="slide-left">
                     <p class="renovation-description">
                         Offrez une seconde vie à vos optiques ternis ou jaunis grâce à notre service de rénovation optique.
