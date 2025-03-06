@@ -1,7 +1,7 @@
-//Navbar
+
 
 document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = window.location.pathname; // Récupère le chemin actuel
+    const currentPath = window.location.pathname; 
     const links = document.querySelectorAll(".nav-link");
 
     links.forEach(link => {
@@ -16,24 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const detailButtons = document.querySelectorAll('.detail-basique');
     const closeButtons = document.querySelectorAll('.btn-close-card');
 
-    // Afficher la carte et faire défiler vers elle
+    
     detailButtons.forEach((button) => {
         button.addEventListener('click', function () {
             const targetId = button.getAttribute('data-target');
             const card = document.querySelector(targetId);
 
-            // Afficher la carte
+           
             card.classList.add('open');
 
-            // Défilement fluide vers la carte
+            
             card.scrollIntoView({
                 behavior: 'smooth',
-                block: 'center' // Centre la carte verticalement
+                block: 'center' 
             });
         });
     });
 
-    // Masquer la carte au clic sur "Fermer"
+    
     closeButtons.forEach((button) => {
         button.addEventListener('click', function () {
             const card = button.closest('.hidden-card');
@@ -46,24 +46,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const detailButtons = document.querySelectorAll('.detail-premium');
     const closeButtons = document.querySelectorAll('.btn-close-card');
 
-    // Afficher la carte et faire défiler vers elle
+    
     detailButtons.forEach((button) => {
         button.addEventListener('click', function () {
             const targetId = button.getAttribute('data-target');
             const card = document.querySelector(targetId);
 
-            // Afficher la carte
+            
             card.classList.add('open');
 
-            // Défilement fluide vers la carte
+            
             card.scrollIntoView({
                 behavior: 'smooth',
-                block: 'center' // Centre la carte verticalement
+                block: 'center'
             });
         });
     });
 
-    // Masquer la carte au clic sur "Fermer"
+    
     closeButtons.forEach((button) => {
         button.addEventListener('click', function () {
             const card = button.closest('.hidden-card');
@@ -77,7 +77,7 @@ function isInViewport(element) {
     return rect.top < window.innerHeight && rect.bottom >= 0;
 }
 
-// Fonction principale pour gérer l'apparition des éléments
+
 function handleScroll() {
     console.log("Éléments cachés détectés :", document.querySelectorAll('.hidden'));
     const hiddenElements = document.querySelectorAll('.hidden');
@@ -89,17 +89,17 @@ function handleScroll() {
     });
 }
 
-// Ajouter les événements de défilement et de chargement
+
 window.addEventListener('scroll', handleScroll);
 document.addEventListener('DOMContentLoaded', handleScroll);
 
-// Vérification au cas où
+
 console.log("Script chargé et fonction handleScroll activée.");
 
-// Écouteur d'événement pour le défilement
+
 window.addEventListener('scroll', handleScroll);
 
-// Exécute une première vérification au chargement de la page
+
 document.addEventListener('DOMContentLoaded', handleScroll);
 
 function isMobileDevice() {
@@ -107,7 +107,7 @@ function isMobileDevice() {
 }
 
 function handleSocialClick(event) {
-    event.preventDefault(); // Empêche le comportement par défaut
+    event.preventDefault(); 
     const mobileUrl = event.currentTarget.getAttribute('data-mobile-url');
     const desktopUrl = event.currentTarget.getAttribute('data-desktop-url');
 
@@ -119,22 +119,22 @@ function handleSocialClick(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".card"); // Sélectionnez toutes les cartes
+    const cards = document.querySelectorAll(".card"); 
 
     function handleScroll() {
         cards.forEach((card) => {
-            const cardTop = card.getBoundingClientRect().top; // Position de la carte
-            const windowHeight = window.innerHeight; // Hauteur de la fenêtre
+            const cardTop = card.getBoundingClientRect().top; 
+            const windowHeight = window.innerHeight; 
 
             if (cardTop < windowHeight - 50) {
-                // Si la carte est visible dans la fenêtre
+                
                 card.classList.add("visible");
             }
         });
     }
 
     window.addEventListener("scroll", handleScroll); // Vérifiez à chaque scroll
-    handleScroll(); // Vérifiez une fois au chargement
+    handleScroll(); 
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -166,17 +166,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-    // Ajout d'un écouteur d'événement pour le défilement
+    
     window.addEventListener('scroll', () => {
         handleScrollAnimation();
     });
 
-    // Exécutez l'animation au chargement pour les éléments déjà visibles
+    
     handleScrollAnimation();
 });
 
 
-//FACTURE
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const serviceRows = document.querySelectorAll('[data-field-name="serviceFacts"]');
@@ -206,32 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         row.addEventListener('input', calculateTotals);
     });
 
-    calculateTotals(); // Initial calculation
+    calculateTotals(); 
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const declineBtn = document.getElementById('decline-cookies');
 
-    // Vérifiez si l'utilisateur a déjà donné son consentement
-    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
-
-    if (!cookiesAccepted) {
-        banner.style.display = 'block'; // Affiche la bannière
-    }
-
-    // Gestion du clic sur le bouton "Accepter"
-    acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookiesAccepted', 'true');
-        banner.style.display = 'none';
-        console.log('Cookies acceptés.');
-    });
-
-    // Gestion du clic sur le bouton "Refuser"
-    declineBtn.addEventListener('click', () => {
-        localStorage.setItem('cookiesAccepted', 'false');
-        banner.style.display = 'none';
-        console.log('Cookies refusés.');
-    });
-});
