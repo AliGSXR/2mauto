@@ -1,9 +1,9 @@
 .header-services {
-    position: relative; /* Position relative pour contenir l'overlay */
-    background-image: url('/img/DSC_0870.JPG'); /* Image de fond */
-    background-size: cover; /* L'image couvre toute la section */
-    background-position: center; /* Centre l'image */
-    height: 100vh; /* Section prend toute la hauteur de l'écran */
+    position: relative; 
+    background-image: url('/img/DSC_0870.JPG'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
 }
 .overlay-services {
     position: absolute;
@@ -19,25 +19,25 @@
     left: 0;
     top: 50%;
     text-align: left;
-    color: white; /* Texte en blanc */
-    opacity: 0; /* Masqué au départ */
-    transform: translateY(20px); /* Légèrement décalé vers le bas */
-    animation: slideInFromLeft 1s ease-out forwards; /* Applique l'animation */
+    color: white; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: slideInFromLeft 1s ease-out forwards;
 }
 
 @keyframes slideInFromLeft {
     from {
-        transform: translateX(-100%); /* Commence en dehors de l'écran à gauche */
-        opacity: 0; /* Commence avec une opacité à 0 */
+        transform: translateX(-100%); 
+        opacity: 0; 
     }
     to {
-        transform: translateX(0); /* Se positionne à sa place normale */
-        opacity: 1; /* Devient entièrement visible */
+        transform: translateX(0); 
+        opacity: 1; 
     }
 }
 
 .header-services-title {
-    background-color: rgba(255, 193, 7, 0.9); /* Fond jaune semi-transparent */
+    background-color: rgba(255, 193, 7, 0.9); 
     padding: 15px 20px 15px 500px;
     font-size: 64px;
     font-weight: bold;
@@ -62,11 +62,11 @@
     padding:154px 150px ;
 }
     .about-title {
-        font-size: 24px; /* Taille normale pour les grands écrans */
-        line-height: 1.6; /* Espacement entre les lignes */
-        max-width: 700px; /* Limite la largeur du texte */
-        margin: 0 auto; /* Centrage horizontal */
-        padding: 20px; /* Ajoute de l'espace autour */
+        font-size: 24px; 
+        line-height: 1.6; 
+        max-width: 700px; 
+        margin: 0 auto; 
+        padding: 20px; 
     }
 
 
@@ -77,13 +77,13 @@
 
 /*-------------FORMULES*/
 
-/* Section principale */
+
 .formules {
     padding: 50px 20px;
 
 }
 
-/* Titre principal */
+
 .formules-title {
     font-size: 2.5rem;
     font-weight: bold;
@@ -92,7 +92,7 @@
     text-align: center;
 }
 
-/* Contenu principal (images + description) */
+
 .basique-content {
     display: flex;
     flex-wrap: wrap; /* Permet l'adaptation sur mobile */
@@ -161,7 +161,7 @@
     position: static;
     margin: 10px auto;
     width: 80%;
-    /* Supprime le positionnement absolu */}
+    }
 
 
 }
@@ -169,7 +169,7 @@
 .btn-details:hover {
     background-color: black;
     color: white;
-    transform: scale(1.05); /* Zoom léger au survol */
+    transform: scale(1.05); 
 }
 
 /*-----------------CARD BASIQUE*/
@@ -243,7 +243,7 @@
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    line-height: 1.8; /* Espacement entre les lignes */
+    line-height: 1.8;
     color: #333;
 }
 
@@ -253,26 +253,26 @@
 }
 
 .card-title .gros-titre-p {
-    color: #dc3545; /* Rouge pour mettre en valeur */
+    color: #dc3545;
 }
 
 .gros-titre-b{
     color: #3b82f6;
 }
 
-/* Liste des éléments */
+
 .list-premium {
 
     padding-left: 0;
 }
 
 .list-premium li {
-    margin-bottom: 15px; /* Espacement entre les points */
+    margin-bottom: 15px;
     font-size: 1rem;
-    line-height: 1.6; /* Espacement des lignes */
+    line-height: 1.6;
 }
 
-/* Informations supplémentaires */
+
 .additional-info {
     text-align: center;
     margin-top: 20px;
@@ -283,9 +283,9 @@
     font-size: 60px;
 }
 
-/* Bouton Fermer */
+
 .btn-close-card {
-    width: 100%; /* Bouton large */
+    width: 100%;
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: 5px;
@@ -302,13 +302,13 @@
 /*--------------SUPPLEMENT*/
 
 
-/* Section Suppléments */
+
 .supplements {
 
-    padding: 50px 20px; /* Espacement interne */
+    padding: 50px 20px; 
 }
 
-/* Titre de la section */
+
 .supplements-title h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -321,28 +321,28 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Conteneur principal */
+
 .supplements-content {
-    background-color: #a0a0a0; /* Couleur de fond pour la boîte */
-    border-radius: 20px; /* Coins arrondis */
+    background-color: #a0a0a0; 
+    border-radius: 20px; 
     padding: 20px 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Liste des suppléments */
+
 .supplements-list {
-    list-style: none; /* Supprime les puces */
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .supplements-list li {
-    display: flex; /* Flexbox pour aligner texte et prix */
-    justify-content: space-between; /* Texte à gauche et prix à droite */
+    display: flex; 
+    justify-content: space-between; 
     font-size: 1rem;
-    line-height: 2.5; /* Espacement vertical */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Ligne séparatrice */
-    padding-bottom: 10px; /* Espacement sous chaque élément */
+    line-height: 2.5; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
+    padding-bottom: 10px; 
     color: white;
 }
 @media (max-width: 766px){
@@ -352,12 +352,12 @@
     }
 }
 
-/* Dernier élément sans bordure */
+
 .supplements-list li:last-child {
     border-bottom: none;
 }
 
-/* Prix */
+
 .supplements-list .price {
     font-weight: bold;
     color: white;
@@ -365,20 +365,20 @@
 
 /*----------L&P--*/
 
-/* Section principale */
+
 .highlight-section {
     padding: 50px 20px;
     position: relative;
-    background-image: url('/img/DSC_1097.JPG'); /* Remplacez par l'image souhaitée */
+    background-image: url('/img/DSC_1097.JPG');
     background-size: cover;
     background-position: center;
-    height: 100%; /* Hauteur de la section */
+    height: 100%;
     display: flex;
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
+    align-items: center;
+    justify-content: center; 
     text-align: center;
     color: white;
-    overflow: hidden; /* Cache les débordements */
+    overflow: hidden;
 }
 .highlight-section::before {
     content: "";
@@ -387,48 +387,48 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Couleur noire avec opacité à 70% */
-    z-index: 1; /* Place l'overlay derrière le contenu */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
 }
 
-/* Overlay (fond semi-transparent) */
+
 .highlight-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 20px;
     z-index: 2;
 }
 
-/* Titre */
+
 .highlight-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Description principale */
+
 .highlight-description {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-/* Résultat */
+
 .highlight-result {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Texte secondaire */
+
 .highlight-secondary-text {
     font-size: 1rem;
     margin-bottom: 30px;
 }
 
-/* Bouton */
+
 .highlight-button {
-    background-color: #ffc107; /* Jaune */
+    background-color: #ffc107;
     color: black;
     font-size: 24px;
     padding: 15px 30px;
@@ -439,22 +439,21 @@
 }
 
 .highlight-button:hover {
-    background-color: #e0a800; /* Couleur plus foncée au survol */
-    transform: scale(1.05); /* Légère mise en avant au survol */
+    background-color: #e0a800;
+    transform: scale(1.05);
 }
 
 /*--------------------------------------------------RENOVATION OPTIQUE--*/
 
-/* Section Rénovation Optique */
-/* Section globale */
+
 .renovation-optique {
-    background-color: #f8f9fa; /* Fond clair */
+    background-color: #f8f9fa;
     padding: 50px 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Titres et sous-titres */
+
 .renovation-title {
     font-size: 2.5rem;
     font-weight: bold;
@@ -468,19 +467,19 @@
 }
 
 .renov-price {
-    color: #ff5722; /* Couleur vive pour attirer l'attention */
+    color: #ff5722; 
     font-weight: bold;
     font-size: 2.2rem;
 }
 
-/* Texte principal */
+
 .renovation-description {
     font-size: 1rem;
     color: #666;
     margin-bottom: 20px;
 }
 
-/* Liste des avantages */
+
 .renovation-benefits li {
     font-size: 1rem;
     color: #333;
@@ -491,12 +490,12 @@
     margin-right: 10px;
 }
 
-/* Image */
+
 .renovation-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .renovation-price{
@@ -505,7 +504,7 @@
 }
 
 
-/* Boutons */
+
 .btn-primary.highlight-button {
     background-color: #FFC107 !important;
     border: none;
@@ -518,30 +517,30 @@
 
 .btn-primary.highlight-button:hover {
     background-color: #e64a19;
-    transform: scale(1.05); /* Léger zoom */
+    transform: scale(1.05);
 }
 
 
-/* Animation de base */
+
 .scroll-animation {
     opacity: 0;
-    transform: translateY(20px); /* Animation par défaut : léger décalage vers le bas */
+    transform: translateY(20px); 
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Animations spécifiques */
+
 .scroll-animation.fade-in {
-    transform: translateY(20px); /* Animation d'apparition */
+    transform: translateY(20px);
 }
 .scroll-animation.slide-right {
-    transform: translateX(-20px); /* Décalage vers la gauche pour glisser vers la droite */
+    transform: translateX(-20px); 
 }
 .scroll-animation.slide-left {
-    transform: translateX(20px); /* Décalage vers la droite pour glisser vers la gauche */
+    transform: translateX(20px);
 }
 
-/* Animation active */
+
 .scroll-animation.scroll-visible {
     opacity: 1;
-    transform: translateY(0); /* Annule le décalage */
+    transform: translateY(0); 
 }
