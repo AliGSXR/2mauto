@@ -1,10 +1,10 @@
 .header-galerie {
-    position: relative; /* Position relative pour contenir l'overlay */
-    background-image: url('/img/DSC_0119.JPG'); /* Image de fond */
-    background-size: cover ; /* L'image couvre toute la section */
-    background-position: center center; /* Centre l'image */
-    height: 100vh; /* Section prend toute la hauteur de l'écran */
-}
+    position: relative; 
+    background-image: url('/img/DSC_0119.JPG'); 
+    background-size: cover ; 
+    background-position: center center; 
+    height: 100vh; 
+    
 .overlay-galerie {
     position: absolute;
     top: 0;
@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-/* Section Galerie */
+
 .gallery {
 
     padding: 50px 0;
@@ -51,9 +51,9 @@
 
 .carousel {
     width: 100%;
-    max-width: 1200px; /* Limite la largeur maximale du carrousel */
-    margin: 0 auto; /* Centre le carrousel */
-    overflow: hidden; /* Cache les débordements des images */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    overflow: hidden; 
     margin-bottom: 100px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .row img:hover {
-    transform: scale(1.05); /* Zoom au survol */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre */
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
 }
 
