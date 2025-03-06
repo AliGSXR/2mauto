@@ -14,8 +14,7 @@ img.ea-thumbnail {
 
     }
     .services {
-        margin-bottom: 150px; /* Ajuste l'espacement pour mobile */
-
+        margin-bottom: 150px; 
     }
     .service-title{
         font-size: 3rem;
@@ -26,8 +25,8 @@ img.ea-thumbnail {
     }
 
     .service-card {
-        width: 100%; /* Chaque carte occupe toute la largeur */
-        margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
+        width: 100%; 
+        margin-bottom: 20px; 
     }
     .header-accueil-title{
         padding: 1px;
@@ -42,15 +41,15 @@ img.ea-thumbnail {
     }
 
     .about-title {
-            font-size: 16px !important; /* Réduit la taille du texte */
-            line-height: 1.4; /* Réduit l'espacement entre les lignes */
-            padding: 10px; /* Moins de padding */
-            width: 100%; /* Prend presque toute la largeur de l'écran */
+            font-size: 16px !important; 
+            line-height: 1.4; 
+            padding: 10px; 
+            width: 100%; 
     }
 
 
     .text-about {
-        padding: 20px !important; /* Réduction du padding global */
+        padding: 20px !important; 
     }
 
 
@@ -61,20 +60,20 @@ img.ea-thumbnail {
 
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* S'assure que le conteneur occupe toute la largeur */
-        padding: 0 15px; /* Réduit les marges latérales */
+        width: 100%; 
+        padding: 0 15px; 
     }
 
     .row {
-        flex-direction: column; /* Empile les colonnes */
-        align-items: center; /* Centre les éléments */
+        flex-direction: column; 
+        align-items: center; 
     }
 }
 
 @media (max-width: 768px) {
     .service-card {
-        width: 100%; /* Prend toute la largeur de la colonne */
-        margin-bottom: 20px; /* Espacement vertical entre les cartes */
+        width: 100%; 
+        margin-bottom: 20px; 
     }
 }
 @media (max-width: 768px) {
@@ -124,49 +123,49 @@ img.ea-thumbnail {
 }
 @media (min-width: 768px) {
     .about-section .container {
-        flex-direction: row; /* Passe en mode côte à côte */
-        align-items: flex-start; /* Aligne en haut */
-        text-align: left; /* Texte aligné à gauche */
+        flex-direction: row; 
+        align-items: flex-start; 
+        text-align: left; 
     }
 
     .about-text{
-        width: 50%; /* Chaque colonne prend 50% de la largeur */
+        width: 50%; 
     }
 
     .about-image {
         width: 50%;
-        margin-left: 50px; /* Supprime l'espacement vertical */
-        text-align: right; /* Centre l'image à droite */
+        margin-left: 50px; 
+        text-align: right; 
     }
 
     .about-button {
-        width: auto; /* Le bouton n'a pas de limite spécifique sur Desktop */
-        text-align: left; /* Bouton aligné à gauche */
-        margin-top: 0; /* Supprime tout espacement supplémentaire */
+        width: auto; 
+        text-align: left; 
+        margin-top: 0; 
     }
 }
 
 @media(max-width: 766px) {
 
-    /* Menu déroulant */
+    
     .navbar-collapse {
-        position: fixed; /* Fixe le menu pour qu'il se déplace indépendamment */
+        position: fixed; 
         top: 30%;
         border-top-left-radius : 20px;
         border-bottom-left-radius: 20px;
-        right: -100%; /* Commence en dehors de l'écran à droite */
-        height: auto; /* Prend toute la hauteur */
-        width: 40%; /* Largeur du menu (modifiable) */
-        background-color: white; /* Fond blanc */
+        right: -100%; 
+        height: auto; 
+        width: 40%;
+        background-color: white;
         opacity: 0.9;
-        transition: all 0.3s ease; /* Transition fluide */
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
-        z-index: 1050; /* Assure que le menu est au-dessus du contenu */
+        transition: all 0.3s ease; 
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); 
+        z-index: 1050; 
     }
 
-    /* Lorsque le menu est ouvert */
+    
     .navbar-collapse.show {
-        right: 0; /* Ramène le menu visible */
+        right: 0; 
     }
 }
 
