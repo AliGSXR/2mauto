@@ -1,16 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue chez 2M AUTO{% endblock %}
-{% block meta_description %}
-    Découvrez nos services de detailing automobile pour donner une seconde jeunesse à votre véhicule. Nettoyage intérieur, polissage, rénovation optique et bien plus.
-{% endblock %}
+{% block title %}Accueil - Bienvenue chez 2M Auto Services{% endblock %}
+{% block meta_description %}Découvrez nos services de detailing automobile pour donner une seconde jeunesse à votre véhicule. Nettoyage intérieur, polissage, rénovation optique et bien plus.{% endblock %}
+{% block meta_keywords %}detailing voiture, nettoyage intérieur, polissage carrosserie,lustrage carosserie, rénovation optique,entretien automobile, detailing premium, 2M Auto Services{% endblock %} 
 
 {% block body %}
 
 
     <section class="header-accueil">
         <div class="overlay-accueil">
-            <!-- Texte principal et bouton -->
             <div class="header-accueil-content text-center">
                 <h1 class="header-accueil-title">Parce que votre voiture mérite le meilleur !</h1>
                 <a href="{{ path('app_contact') }}" class="btn btn-contact">Contactez-nous !</a>
@@ -19,12 +17,8 @@
     </section>
     <div class="line"></div>
 
-
-
-
     <section class="about-section">
         <div class="container d-flex align-items-center justify-content-between">
-            <!-- Colonne Texte -->
             <div class="about-text ">
                 <h2>Chez <span class="highlight">2M AUTO SERVICES</span>, nous sommes passionnés par l’automobile et soucieux du détail.</h2>
                 <p>
@@ -33,7 +27,6 @@
                 <button type="button" class="btn btn-light">Contact</button>
             </div>
 
-            <!-- Colonne Image -->
             <div class="about-image ">
                 <img src="{{ asset('img/IMG_9443.jpg') }}" alt="apropos">
             </div>
@@ -43,7 +36,6 @@
 
     <section class="why-choose-us">
         <div class="container">
-            <!-- Titre principal -->
             <hr class="title-divider">
             <h2 class="section-title">Pourquoi choisir <span>2M</span> AUTO SERVICES ?</h2>
             <!-- Liste des points -->
@@ -100,9 +92,8 @@
         <section class="container text-center">
             <h2 class="service-title">Nos Services</h2>
             <p class="service-texte">Découvrez nos services de detailing intérieur et extérieur pour particuliers et professionnels</p>
-            <!-- Cartes -->
             <div class="row">
-                {% for service in services %}<!-- Card 1 -->
+                {% for service in services %}
                 <div class="col-md-4 col-sm-12 mb-4">
                     <div class="card service-card">
                         <img src="{{ asset('uploads/' ~ service.image ) }}" class="card-img-top img-fluid" alt="{{service.name}}">
@@ -121,13 +112,10 @@
 
     <section class="tem mt-lg-5">
         <div class="container">
-            <!-- Témoignage Section -->
             <div class="row mb-5">
-                <!-- Image -->
                 <div class="col-md-6">
                     <img src="{{ asset('img/DSC_1103.JPG') }}" alt="Car detailing" class="img-fluid rounded">
                 </div>
-                <!-- Témoignage -->
                 {% if avisselection %}
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="testimonial p-4 rounded">
@@ -143,18 +131,13 @@
                 {% else %}
                     <div class="col-md-6 d-flex align-items-center">
                         <div class="testimonial p-4 rounded">
-
                             <p class="feedback"> Aucun avis pour le moment</p>
-
-                        </div>
+                            </div>
                     </div>
-
                 {% endif %}
             </div>
 
-            <!-- Localisation Section -->
             <div class="row">
-                <!-- Texte -->
                 <div class="text-where col-md-6 ">
                     <h2 class="section-title">Où nous trouver ?</h2>
                     <p>Notre atelier de detailing est idéalement situé à Ambérieu-en-Bugey, offrant un accès facile et pratique pour nos clients de la région et des alentours.</p>
@@ -165,7 +148,6 @@
                     <p>Uniquement sur rendez-vous</p>
                     <a href="{{ path('app_contact') }}" class="btn btn-light">Contact</a>
                 </div>
-                <!-- Carte -->
                 <div class="carte col-md-6  ">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2773.566874889168!2d5.329619276931425!3d45.959936171086454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b5225769b314f%3A0x9a7afa65117002c9!2s315%20Rue%20des%20Mouettes%2C%2001500%20Amb%C3%A9rieu-en-Bugey!5e0!3m2!1sfr!2sfr!4v1735945823533!5m2!1sfr!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
