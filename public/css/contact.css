@@ -1,9 +1,9 @@
 .header-contact {
-    position: relative; /* Position relative pour contenir l'overlay */
-    background-image: url('/img/DSC_0377.JPG'); /* Image de fond */
-    background-size: cover; /* L'image couvre toute la section */
-    background-position: center; /* Centre l'image */
-    height: 100vh; /* Section prend toute la hauteur de l'écran */
+    position: relative; 
+    background-image: url('/img/DSC_0377.JPG'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
 }
 .overlay-contact {
     position: absolute;
@@ -15,11 +15,11 @@
 }
 
 .header-ml {
-    position: relative; /* Position relative pour contenir l'overlay */
-    background-image: url('/img/DSC_0411.JPG'); /* Image de fond */
-    background-size: cover; /* L'image couvre toute la section */
-    background-position: center; /* Centre l'image */
-    height: 100vh; /* Section prend toute la hauteur de l'écran */
+    position: relative; 
+    background-image: url('/img/DSC_0411.JPG'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
     margin-bottom: 20px;
 }
 .overlay-ml {
@@ -41,14 +41,14 @@
     top: 50%;
     align-items: center;
     text-align: center;
-    color: white; /* Texte en blanc */
-    opacity: 0; /* Masqué au départ */
-    transform: translateY(20px); /* Légèrement décalé vers le bas */
-    animation: slideInFromLeft 1s ease-out forwards; /* Applique l'animation */
+    color: white; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: slideInFromLeft 1s ease-out forwards; 
 }
 .contact-page {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Couleur de fond claire */
+    background-color: #f9f9f9; 
 }
 
 .contact-page h2 {
@@ -98,15 +98,15 @@
 }
 
 .contact-number {
-    color: black; /* Couleur jaune pour correspondre au thème */
+    color: black; 
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-number:hover {
-    color: #e0a800; /* Couleur légèrement plus foncée au survol */
-    text-decoration: underline; /* Ajoute un soulignement au survol */
+    color: #e0a800; 
+    text-decoration: underline; 
 }
 
 .social-links {
@@ -133,7 +133,7 @@
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Agrandissement au survol */
+    transform: scale(1.2); 
 }
 
 .social-link {
@@ -142,9 +142,9 @@
 }
 
 .social-link::after {
-    content: attr(data-tooltip); /* Affiche le contenu de l'attribut data-tooltip */
+    content: attr(data-tooltip); 
     position: absolute;
-    bottom: 100%; /* Place la bulle au-dessus */
+    bottom: 100%; 
     left: 50%;
     transform: translateX(-50%);
     background-color: #FFC107;
@@ -154,13 +154,13 @@
     white-space: nowrap;
     font-size: 0.9rem;
     font-weight: bold;
-    opacity: 0; /* Masque la bulle */
+    opacity: 0; 
     visibility: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:hover::after {
-    opacity: 1; /* Affiche la bulle */
+    opacity: 1; 
     visibility: visible;
-    transform: translateX(-50%) translateY(-10px); /* Déplace légèrement la bulle vers le haut */
+    transform: translateX(-50%) translateY(-10px); 
 }
